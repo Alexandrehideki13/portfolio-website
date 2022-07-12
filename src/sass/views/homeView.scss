@@ -1,0 +1,128 @@
+.homeView {
+  &__header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border-bottom: 2px solid rgba(30, 30, 70, 0.979);
+    background: rgba(19, 19, 54, 0.699);
+    backdrop-filter: blur(25px);
+
+    &-content {
+      @include flex(space-between, center, row);
+      @include patternLayout;
+      height: 4rem;
+      padding: 1rem;
+
+      &-navigation {
+        @include flex(false, false, row);
+        list-style: none;
+        gap: 35px;
+        color: $color;
+
+        li {
+          min-width: fit-content;
+        }
+      }
+    }
+  }
+
+  &__presentation {
+    @include flex(space-around, center, row);
+    @include patternLayout;
+    height: calc(100vh - 4rem);
+    padding-top: 4rem;
+
+    &-text {
+      &-main {
+        &-1 {
+          font-size: $font-big;
+        }
+        &-2 {
+          font-size: $font-biggest;
+        }
+      }
+
+      &-description {
+        font-size: $font-big;
+      }
+    }
+
+    &-photo {
+      width: 400px;
+      margin: auto 0;
+    }
+  }
+
+  &__about {
+    background: $background-secondary;
+
+    &-content {
+      @include flex(center, center, row);
+      @include patternLayout;
+      height: calc(100vh - 4rem);
+
+      &-photo {
+        width: 400px;
+        margin-right: 15rem;
+      }
+
+      &-about {
+        width: 500px;
+
+        &-title {
+          @include patternTitle;
+        }
+
+        &-text {
+          font-size: $font-big;
+        }
+      }
+    }
+  }
+
+  &__projects {
+    padding-top: 5rem;
+    min-height: calc(100vh - 4rem);
+    @include flex(false, center, column);
+
+    &-title {
+      @include patternTitle;
+      margin-bottom: 0;
+    }
+
+    &-text {
+      font-size: $font-medium;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    &-content {
+      @include patternLayout;
+      @include flex(false, false, row);
+      flex-wrap: wrap;
+      gap: 30px;
+
+      &-project {
+        border: 1px solid $gray;
+        border-radius: 10px;
+        width: 300px;
+        min-height: 300px;
+        position: relative;
+      }
+    }
+
+    &-buttonMoreProjects {
+      @include patternButton();
+      width: 250px;
+      height: 50px;
+      margin-top: 3rem;
+      font-size: $font-medium-secondary;
+    }
+  }
+
+  &__footer {
+    height: 8rem;
+  }
+}

@@ -1,0 +1,102 @@
+<template>
+  <div v-if="!this.project.isBuilding" class="cardProject">
+    <img
+      class="cardProject-img"
+      src="../assets/img/portfolio-dekiDogs.jpg"
+      alt="Imagem do projeto"
+    />
+    <div class="cardProject-content">
+      <div class="cardProject-content-box1">
+        <div class="cardProject-content-box1-1">
+          <h3 class="cardProject-content-box1-1-title">
+            {{ project.title }}
+          </h3>
+          <p class="cardProject-content-box1-1-typeWebsite">
+            {{ project.typeWebsite }}
+          </p>
+        </div>
+        <div class="cardProject-content-box1-2">
+          <span class="cardProject-content-box1-2-stack">
+            {{ projectStack }}
+          </span>
+        </div>
+      </div>
+      <p class="cardProject-content-description">
+        {{ project.description }}
+      </p>
+    </div>
+    <div class="cardProject-buttons">
+      <a :href="project.urlWebsite" target="_blank">
+        <button class="cardProject-buttons-buttonWebsite">Acessar site</button>
+      </a>
+      <a :href="project.urlRepository" target="_blank">
+        <button class="cardProject-buttons-buttonRepository">Saiba mais</button>
+      </a>
+    </div>
+  </div>
+  <div v-else class="cardProject-building">
+    <svg
+      class="cardProject-building-img"
+      width="496"
+      height="496"
+      viewBox="0 0 496 496"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M476.3 99.7C473.7 89.8 469.8 80.4 464.6 71.5L473.9 52.9L443.1 22.1L424.5 31.4C415.6 26.2 406.2 22.2 396.3 19.7L389.8 0H346.3L339.7 19.7C329.8 22.3 320.4 26.2 311.5 31.4L292.9 22.1L262.1 52.9L271.4 71.5C266.2 80.4 262.3 89.8 259.7 99.7L240 106.3V128H40C17.9 128 0 145.9 0 168V408C0 430.1 17.9 448 40 448H144V480H112V496H384V480H352V448H456C478.1 448 496 430.1 496 408V106.2L476.3 99.7ZM336 480H160V448H336V480ZM456 432H40C26.8 432 16 421.2 16 408V400H480V408C480 421.2 469.2 432 456 432ZM480 384H16V168C16 154.8 26.8 144 40 144H240V149.8L259.7 156.4C262.3 166.3 266.2 175.7 271.4 184.6L262.1 203.2L292.9 234L311.5 224.7C320.4 229.9 329.8 233.9 339.7 236.4L346.3 256.1H389.8L396.4 236.4C406.3 233.8 415.7 229.9 424.6 224.7L443.2 234L474 203.2L464.7 184.6C469.9 175.7 473.8 166.3 476.4 156.4L480.1 155.2V384H480ZM480 138.2L462.7 144L461.7 148.4C459.3 159.5 454.9 170.1 448.7 179.8L446.2 183.6L454.4 199.9L440 214.4L423.7 206.2L419.9 208.7C410.2 214.9 399.7 219.3 388.5 221.7L384.1 222.7L378.3 240H357.8L352 222.7L347.6 221.7C336.5 219.3 325.9 214.9 316.2 208.7L312.4 206.2L296.1 214.4L281.6 200L289.8 183.7L287.3 179.9C281.1 170.2 276.7 159.7 274.3 148.5L273.3 144.1L256 138.3V117.8L273.3 112L274.3 107.6C276.7 96.5 281.1 85.9 287.3 76.2L289.8 72.4L281.6 56L296 41.6L312.3 49.8L316.1 47.3C325.8 41.1 336.3 36.7 347.5 34.3L351.9 33.3L357.7 16H378.2L384 33.3L388.4 34.3C399.5 36.7 410.1 41.1 419.8 47.3L423.6 49.8L439.9 41.6L454.4 56L446.2 72.3L448.7 76.1C454.9 85.8 459.3 96.3 461.7 107.5L462.7 111.9L480 117.7V138.2Z"
+        fill="#111111"
+      />
+      <path
+        d="M368 48C323.9 48 288 83.9 288 128C288 172.1 323.9 208 368 208C412.1 208 448 172.1 448 128C448 83.9 412.1 48 368 48ZM368 192C332.7 192 304 163.3 304 128C304 92.7 332.7 64 368 64C403.3 64 432 92.7 432 128C432 163.3 403.3 192 368 192Z"
+        fill="#111111"
+      />
+      <path
+        d="M368 96C350.4 96 336 110.4 336 128C336 145.6 350.4 160 368 160C385.6 160 400 145.6 400 128C400 110.4 385.6 96 368 96ZM368 144C359.2 144 352 136.8 352 128C352 119.2 359.2 112 368 112C376.8 112 384 119.2 384 128C384 136.8 376.8 144 368 144Z"
+        fill="#111111"
+      />
+      <path
+        d="M48 192V200C48 208.8 40.8 216 32 216V232C40.8 232 48 239.2 48 248V256C48 269.2 58.8 280 72 280H80V264H72C67.6 264 64 260.4 64 256V248C64 238.5 59.8 229.9 53.1 224C59.8 218.1 64 209.5 64 200V192C64 187.6 67.6 184 72 184H80V168H72C58.8 168 48 178.8 48 192Z"
+        fill="#111111"
+      />
+      <path
+        d="M296 272V264C296 250.8 285.2 240 272 240H264V256H272C276.4 256 280 259.6 280 264V272C280 281.5 284.2 290.1 290.9 296C284.2 301.9 280 310.5 280 320V328C280 332.4 276.4 336 272 336H264V352H272C285.2 352 296 341.2 296 328V320C296 311.2 303.2 304 312 304V288C303.2 288 296 280.8 296 272Z"
+        fill="#111111"
+      />
+      <path d="M96 176H248V192H96V176Z" fill="#111111" />
+      <path d="M128 208H248V224H128V208Z" fill="#111111" />
+      <path d="M96 208H112V224H96V208Z" fill="#111111" />
+      <path d="M96 240H248V256H96V240Z" fill="#111111" />
+      <path d="M96 272H248V288H96V272Z" fill="#111111" />
+      <path d="M232 304H248V320H232V304Z" fill="#111111" />
+      <path d="M96 304H216V320H96V304Z" fill="#111111" />
+      <path d="M96 336H248V352H96V336Z" fill="#111111" />
+    </svg>
+    <h3 class="cardProject-building-title">Em breve</h3>
+    <p class="cardProject-building-text">
+      Espere um pouco, o projeto está em andamento, sendo construído com
+      bastante dedicação.
+    </p>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    project: Object,
+  },
+
+  computed: {
+    projectStack() {
+      console.log(this.project);
+      if (this.project.stack) {
+        if (this.project.stack.length > 1) {
+          return this.project.stack.join("/");
+        }
+        return this.project.stack[0];
+      }
+      return "";
+    },
+  },
+};
+</script>

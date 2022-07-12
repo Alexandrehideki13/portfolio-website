@@ -1,0 +1,66 @@
+@mixin flexLayout(
+  $display,
+  $justify: false,
+  $align: false,
+  $direction: false,
+  $wrap: false
+) {
+  display: $display;
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $align {
+    align-items: $align;
+  }
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin flex($justify: false, $align: false, $direction: false, $wrap: false) {
+  @include flexLayout(flex, $justify, $align, $direction, $wrap);
+}
+
+@mixin patternLayout() {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@mixin patternTitle() {
+  font-size: $font-biggest;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+@mixin patternButton() {
+  border-radius: 5px;
+  border: none;
+  font-family: $font;
+  font-size: $font-medium;
+  font-weight: 600;
+  background: #fff;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    color: $color;
+    background: #164bdd;
+    transition: $transition;
+  }
+}
+
+@mixin borderGradient() {
+  border: solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(600deg, #b16ec4, #5f97b9);
+}
+
+@mixin backgroundGlassMorphism() {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
