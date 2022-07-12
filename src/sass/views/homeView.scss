@@ -113,11 +113,14 @@
       }
     }
 
+    &-linkMoreProjects {
+      margin-top: 3rem;
+    }
+
     &-buttonMoreProjects {
       @include patternButton();
       width: 250px;
       height: 50px;
-      margin-top: 3rem;
       font-size: $font-medium-secondary;
     }
   }

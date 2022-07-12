@@ -63,6 +63,7 @@
         </div>
       </div>
       <a
+        class="homeView__projects-linkMoreProjects"
         href="https://github.com/Alexandrehideki13?tab=repositories"
         target="_blank"
       >
